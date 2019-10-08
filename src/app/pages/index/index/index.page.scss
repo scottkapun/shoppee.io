@@ -1,0 +1,85 @@
+.abso {
+  position:fixed;
+  z-index: 999
+}
+
+ion-content {
+  --background: #eaeeef;
+}
+
+.label-title-column {
+  color: #333;
+}
+
+.span-small-io {
+  color: #333;
+  font-size: 12px;
+}
+
+.sc-ion-card-md-h {
+    margin-left: unset;
+    margin-right: unset;
+    -webkit-margin-start: 0px;
+    margin-inline-start: 0px; 
+    -webkit-margin-end: 0px; 
+    margin-inline-end: 0px; 
+    margin-top:0px;
+    box-shadow: 0 3px 1px -2px rgba(255, 255, 255, 0.2), 0 2px 2px 0 rgba(89, 89, 89, 0.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  transition: 0.8s;
+  position:fixed;
+}
+
+/* Show background if class is active */
+.show-background {
+  border-style: none;
+  background: #FFFFFF;
+  transition: 0.8s;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.05), 0 1px 5px 0 rgba(0,0,0,.08);
+}
+
+.show-background .headicon {
+  color: #687d7b;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+  background-image: none;
+}
+
+.headicon {
+	color: #FFF;
+	font-size: 26px;
+}
+
+.kategori-index-io {
+	font-size: 12px;
+	margin-top:1px;
+	margin-bottom:1px;
+	text-align: center;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+.kategori-in-io {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.kategori-in-io ion-img {
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid #e1e1e1;
+}
+
+.featureSlider{
+  height: 35%;
+}

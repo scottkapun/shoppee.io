@@ -1,0 +1,154 @@
+<ion-header>
+	<div class="absos {{stdisplay}}">
+		<ion-toolbar [class.show-background]="showToolbar">
+    		<ion-searchbar style="margin-top: 3px;" [(ngModel)]="searchKey" placeholder="Pencarian"></ion-searchbar>
+    			<ion-buttons slot="end">
+      				<ion-button size="small" shape="round">
+        				<ion-icon name="notifications" class="headicon"></ion-icon>
+				    </ion-button>
+				    <ion-button size="small" shape="round">
+        				<ion-icon name="chatboxes" class="headicon"></ion-icon>
+				    </ion-button>
+		    </ion-buttons>
+  		</ion-toolbar>
+	</div>
+</ion-header>
+
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+
+  <ion-slides pager="true" class="featureSlider" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)">
+    <ion-slide style="background: url('https://www.microstocker.pro/wp-content/uploads/2019/01/Travel-agency-promo-banner-with-discounts-for-tours.-Vector-illustration-2761-600x349.jpg') 0 0/100% 100% no-repeat;">
+    </ion-slide>
+
+    <ion-slide style="background: url('https://thumbs.dreamstime.com/z/travel-promo-banner-design-agency-vector-illustratio-illustration-130596957.jpg') 0 0/100% 100% no-repeat;">
+    </ion-slide>
+  </ion-slides>
+
+	<ion-refresher (ionRefresh)="doRefresh($event)" style="z-index: 999">
+	    <ion-refresher-content
+	      pullingIcon="arrow-dropdown"
+	      pullingText="Pull to refresh"
+	      refreshingSpinner="dots">
+	    </ion-refresher-content>
+	</ion-refresher>
+
+<div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">KATEGORI</ion-label>
+    <span class="span-small-io" slot="end" (click)="presentModal()">Lihat Semua</span>
+  </ion-item>
+
+    <ion-grid>
+	  <ion-row>
+	    <ion-col size="3"> 
+	    	<div class="kategori-in-io">
+	      		<ion-img src="https://www.kitar.com.br/wp-content/uploads/2018/12/icone-veiculos.png"></ion-img>
+			</div>
+	      	<p class="kategori-index-io">Otomotif</p>
+	    </ion-col>
+	    <ion-col size="3"> 
+	    	<div class="kategori-in-io">
+	      		<ion-img src="https://www.shareicon.net/data/128x128/2016/10/12/843495_chip_512x512.png"></ion-img>
+			</div>
+	      	<p class="kategori-index-io">Elektronik</p>
+	    </ion-col>
+	    <ion-col size="3"> 
+	    	<div class="kategori-in-io">
+	      		<ion-img src="https://blog.rankwatch.com/wp-content/uploads/2018/06/if_mobile_2431356-300x300.png"></ion-img>
+			</div>
+	      	<p class="kategori-index-io">Handphone & Aksesoris</p>
+	    </ion-col>
+	    <ion-col size="3"> 
+	    	<div class="kategori-in-io">
+	      		<ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1024px-Circle-icons-computer.svg.png"></ion-img>
+			</div>
+	      	<p class="kategori-index-io">Komputer & Aksesoris</p>
+	    </ion-col>
+	  </ion-row>
+	</ion-grid>
+</div>
+
+<div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">PRODUK TERLARIS</ion-label>
+  </ion-item>
+
+  	<div class="thumnails-io">
+  		<div class="list-thumbnail-io">
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/394510248/394510248_80584449-5708-4d19-8eea-7e03462699ee_1080_1080.jpg">
+    		</div>
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/283002686/283002686_7dc52f1f-5e01-4e2f-9de2-ef05124b1e7d_1080_1080.jpg">
+    		</div>
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_d719e055-db6c-427d-8b24-702585988a24_600_600.png">
+    		</div>
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/394510248/394510248_80584449-5708-4d19-8eea-7e03462699ee_1080_1080.jpg">
+    		</div>
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_d719e055-db6c-427d-8b24-702585988a24_600_600.png">
+    		</div>
+    		<div class="img-thumb-io" (click)="openProduk()">
+      			<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_aea29143-744e-41a0-ac49-a35428796726_600_600.png">
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div class="column-bg-p-io">
+  <ion-item>
+    <ion-label class="label-title-column">REKOMENDASI</ion-label>
+  </ion-item>
+  
+<ion-grid>
+	  <ion-row>
+	    <ion-col size="6"> 
+
+
+	  <ion-row>
+	    <ion-col size="12" *ngFor="let datas of hasilproduk"> 
+	    	<ion-card (click)="openProduk(datas.produk_id,datas.nama_produk)">
+				<img src="{{server+'/assets/images/bg-produk/'+datas.gambar_produk}}">
+					<ion-item lines="none">
+						<ion-label text-wrap>
+							<span class="title-produk-fc">{{datas.nama_produk}}</span><br/>
+							<span class="harga-in-window">Rp {{datas.harga_produk}}</span>
+						</ion-label>
+					</ion-item>
+			</ion-card>
+	    </ion-col>
+	  </ion-row>
+
+</ion-col>
+
+	    <ion-col size="6"> 
+
+	  <ion-row>
+	    <ion-col size="12" *ngFor="let datass of hasilproduks"> 
+	    	<ion-card (click)="openProduk(datass.produk_id,datass.nama_produk)">
+				<img src="{{server+'/assets/images/bg-produk/'+datass.gambar_produk}}">
+					<ion-item lines="none">
+						<ion-label text-wrap>
+							<span class="title-produk-fc">{{datass.nama_produk}}</span><br/>
+							<span class="harga-in-window">Rp {{datass.harga_produk}}</span>
+						</ion-label>
+					</ion-item>
+			</ion-card>
+	    </ion-col>
+	  </ion-row>
+
+</ion-col>
+</ion-row>
+</ion-grid>
+</div>
+
+	<ion-infinite-scroll (ionInfinite)="loadData($event)" style="background: #fff;" class="{{infiscrollio}}">
+		<ion-infinite-scroll-content
+	      loadingSpinner="dots"
+	      loadingText="Loading more data...">
+	    </ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>
+	

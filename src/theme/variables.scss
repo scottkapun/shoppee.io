@@ -74,4 +74,67 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** transparentio **/
+  --ion-color-transparentio: #ffffff;
+  --ion-color-transparentio-rgb: 255, 215, 0;
+  --ion-color-transparentio-contrast: #333333;
+  --ion-color-transparentio-contrast-rgb: 0, 0, 0;
+  --ion-color-transparentio-shade: #ffffff;
+  --ion-color-transparentio-tint: #ffffff;
+
+  /** specialgray **/
+  --ion-color-specialgray: #eaeeef;
+  --ion-color-specialgray-rgb: 255, 215, 0;
+  --ion-color-specialgray-contrast: #333333;
+  --ion-color-specialgray-contrast-rgb: 0, 0, 0;
+  --ion-color-specialgray-shade: #cdd1d2;
+  --ion-color-specialgray-tint: #eaeeef;
+}
+
+
+.searchbar-input.sc-ion-searchbar-md {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 0px !important;
+}
+
+.show-background .searchbar-input.sc-ion-searchbar-md {
+  background: #eaeeef;
+}
+
+.swiper-pagination {
+  text-align: left;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  left: 5px;
+}
+
+.slides-md {
+    --bullet-background: var(--ion-color-step-200,#ccc);
+    --bullet-background-active: #ffffff;
+    --progress-bar-background: rgba(var(--ion-text-color-rgb,0,0,0),0.25);
+    --progress-bar-background-active: #ffffff;
+    --scroll-bar-background: rgba(var(--ion-text-color-rgb,0,0,0),0.1);
+    --scroll-bar-background-active: rgba(var(--ion-text-color-rgb,0,0,0),0.5);
+}
+
+.button-solid {
+  --box-shadow: none;
+}
+
+.ion-color-specialgray {
+    --ion-color-base: var(--ion-color-specialgray) !important;
+    --ion-color-base-rgb: var(--ion-color-specialgray-rgb) !important;
+    --ion-color-contrast: var(--ion-color-specialgray-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-specialgray-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-specialgray-shade) !important;
+    --ion-color-tint: var(--ion-color-specialgray-tint) !important;
+}
+
+ion-item {
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+  --highlight-color-focused: var(--ion-color-light);
 }

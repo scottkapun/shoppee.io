@@ -1,0 +1,49 @@
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+  background-image: none;
+}
+
+.headicon {
+	color: #687d7b;
+	font-size: 30px;
+}
+
+h1 {padding: 100px 0; font-weight: 400; text-align: center;}
+p {margin: 0 0 20px; line-height: 1.5;}
+ 
+.main {margin: 0 auto; min-width: 320px; max-width: 800px;}
+.content {background: #fff; color: #373737;}
+.content > div {display: none; padding: 20px 25px 5px;}
+ 
+.tab-io-kateg { 
+	display: none;
+}
+
+.tab-io-kateg-label {
+	display: inline-block; 
+	padding: 15px 25px; 
+	font-weight: 600; 
+	text-align: center;
+}
+
+.tab-io-kateg-label:hover {
+	color: #fff; 
+	cursor: pointer;
+}
+
+.tab-io-kateg:checked + .tab-io-kateg-label {
+	background: #ed5a6a; 
+	color: #fff;
+}
+ 
+#tab1:checked ~ .xxxx .content #content1,
+#tab2:checked ~ .xxxx .content #content2,
+#tab3:checked ~ .xxxx .content #content3,
+#tab4:checked ~ .xxxx .content #content4 {
+	display: block;
+}

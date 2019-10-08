@@ -1,0 +1,22 @@
+.headicon {
+	color: #687d7b;
+	font-size: 30px;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+  background-image: none;
+}
+
+.info-game {
+	font-size: 14px;
+}
+
+.color-333 {
+	color: #333
+}

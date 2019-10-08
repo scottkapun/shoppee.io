@@ -1,0 +1,42 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>	Login Shoppee.io</ion-title>
+    <ion-buttons size="small" shape="round" slot="start" (click)="tutupLogin()">
+    	<ion-button size="small" shape="round">
+		    <ion-icon name="close" class="headicon"></ion-icon>
+		</ion-button>
+	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid class="gridoption">
+		<ion-row class="opsidaftar">
+    		<ion-col class="no-hp {{activehp}} md hydrated" (click)="opsiHp()">No. Handphone</ion-col>
+	    	<ion-col class="email {{activeemail}} md hydrated" (click)="opsiEmail()">Email</ion-col>
+	    </ion-row>
+	</ion-grid>
+
+	<ion-list>
+		<div class="{{displayhp}}">
+			<ion-item>
+				<ion-input type="tel" placeholder="No. Handphone" [(ngModel)]="opsi_hp"></ion-input>
+			</ion-item>
+			<div>
+				<ion-button expand="full" padding color="primary" (click)="aktivasiOpsi()" [disabled]="disableButton">Verifikasi Nomor</ion-button>
+			</div>
+		</div>
+		<div class="{{displayemail}}">
+			<ion-item>
+				<ion-input type="text" placeholder="Email" [(ngModel)]="opsi_email"></ion-input>
+			</ion-item>
+			<div>
+				<ion-button expand="full" padding color="primary" (click)="aktivasiOpsi()" [disabled]="disableButton">Verifikasi Email</ion-button>
+			</div>
+		</div>
+			<p class="marketing-t1" padding>
+				Tidak punya akun?
+				<span (click)="optionDaftar()">Daftar sekarang</span>
+			</p>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,94 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Detail Pembelian</ion-title>
+    	<ion-buttons slot="start">
+		    <ion-back-button></ion-back-button>
+		</ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column" style=" font-size: 14px;">Status</ion-label>
+    <ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; font-size: 14px;">Progres</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label class="label-title-column" style=" font-size: 14px;">Tanggal Pembelian</ion-label>
+    <ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; font-size: 14px;">18 Agustus 2019 15:12</ion-label>
+  </ion-item> 
+  <ion-item lines="none">
+    <ion-label class="label-title-column" style=" font-size: 14px;">INV/20190818/IIX/0001</ion-label>
+  </ion-item>
+</div>
+
+  <div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">DAFTAR PRODUK</ion-label>
+  </ion-item>
+
+  <ion-item (click)="openProduk()" lines="none">
+        <ion-avatar slot="end">
+        	<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/4/15849475/15849475_b6ba4050-cbec-4ef0-b0b6-912953441a70_600_600.jpg" style="border-radius: 4px;">
+        </ion-avatar>
+        <ion-label>
+            <p>Baju Muslim Blisabrid Blisabrid </p>
+            <p>Jumlah : 5</p>
+            <p>
+            	Total Harga : 500,000
+        	</p>
+        </ion-label>
+    </ion-item>
+
+    <ion-item (click)="openProduk()" lines="none">
+        <ion-avatar slot="end">
+        	<img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/2/4/15849475/15849475_b6ba4050-cbec-4ef0-b0b6-912953441a70_600_600.jpg" style="border-radius: 4px;">
+        </ion-avatar>
+        <ion-label>
+            <p>Baju Muslim Blisabrid Blisabrid </p>
+            <p>Jumlah : 1</p>
+            <p>
+            	Total Harga : 100,000
+        	</p>
+        </ion-label>
+    </ion-item>
+  </div>
+
+  <div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">ALAMAT PENGIRIMAN</ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+        <ion-label text-wrap>
+            <p>Jln. Yusuf No 10A, Patokan rumah gang kecil, Masuk ke dalam 10 meter sampai sebelah kanan. </p>
+            <p>DKI Jakarta</p>
+            <p>Jakarta Barat</p>
+            <p>11540</p>
+        </ion-label>
+    </ion-item>
+  </div>  
+
+  <div class="column-bg-p-io">
+  <ion-item>
+    <ion-label class="label-title-column">INFORMASI PEMBAYARAN</ion-label>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label class="label-title-column" style=" font-size: 14px;">Metode Pembayaran</ion-label>
+   	<ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; font-size: 14px;">Transfer Mandiri</ion-label>
+   </ion-item>
+   <ion-item lines="none">
+    <ion-label class="label-title-column" style=" font-size: 14px;">Total Harga</ion-label>
+   	<ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; font-size: 14px;"> Rp 600,000</ion-label>
+   </ion-item>
+   <ion-item>
+    <ion-label class="label-title-column" style=" font-size: 14px;">Ongkos Kirim</ion-label>
+   	<ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; font-size: 14px;">Rp 9,000</ion-label>
+   </ion-item>
+   <ion-item lines="none">
+    <ion-label class="label-title-column" style=" font-size: 14px; font-weight: 500">Total Pembayaran</ion-label>
+   	<ion-label class="label-title-column" slot="end" style="text-align: right; font-weight: 500; color: #ff5400; font-size: 14px;">Rp 609,000</ion-label>
+   </ion-item>
+  </div>    
+</ion-content>

@@ -1,0 +1,107 @@
+ion-content {
+  --background: #eaeeef;
+}
+
+ion-avatar {
+  width: 30px;
+  height: 30px;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  transition: 0.8s;
+  position:fixed;
+}
+
+rating {
+  ion-icon {
+    color: gray;
+
+    &.filled {
+      color: #ffb400;
+    }
+  }
+}
+
+/* Show background if class is active */
+.show-background {
+    border-style: none;
+    background: #FFFFFF;
+    transition: 0.8s;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.05), 0 1px 5px 0 rgba(0,0,0,.08);
+}
+
+.show-background .icon-head-io {
+  color: #687d7b;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+    background-image: none;
+}
+
+.show-background ion-back-button {
+  --color: #687d7b;
+}
+
+.icon-head-io {
+  font-size: 20px;
+  color: #687d7b;
+}
+
+.icon-head-io-x {
+  font-size: 20px;
+  color: #687d7b;
+}
+
+ion-back-button {
+  --color: #FFF;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+.featureSlider{
+  height: 56%;
+}
+
+.label-title-column {
+  color: #333;
+}
+
+.label-info-produk {
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.label-info-produk-b {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.label-title-ulasan {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.label-tgl-ulasan {
+  font-size: 12px;
+  color: #555;
+}
+
+.ulasan-row {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.min-height0 {
+  --min-height: 0px;
+}
+
+.footer-cos-io {
+  position: absolute; bottom: 0px; width: 100%; background: #FFF; border-top: 1px solid #e1e1e1
+}

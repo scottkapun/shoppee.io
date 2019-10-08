@@ -1,0 +1,69 @@
+ion-content {
+  --background: #eaeeef;
+}
+
+ion-toolbar {
+--background: transparent;
+--ion-color-base: transparent !important;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.header-md::after {
+  background-image: none;
+}
+
+.fav-io {
+  background: #fff;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.no-putih {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #333;
+}
+
+.label-title-column {
+  color: #333;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+.icon-head-io {
+  font-size: 20px;
+  color: #687d7b;
+}
+
+.img-modal-io {
+  width: 95px;
+  height: 95px;
+}
+
+.footer-cos-io {
+  position: absolute; bottom: 0px; width: 100%; background: #FFF; border-top: 1px solid #e1e1e1
+}
+
+.total-harga {
+  color: #555;
+  font-size: 12px;
+}
+
+.total-xharga .sc-ion-label-md-h {
+  line-height: 0px
+}
+
+.info-game {
+  font-size: 14px;
+}
+
+.color-333 {
+  color: #333
+}
+
+.headicon-qty {
+  color: #687d7b;
+}

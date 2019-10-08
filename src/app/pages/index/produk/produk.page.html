@@ -1,0 +1,218 @@
+<ion-header>
+	<ion-toolbar [class.show-background]="showToolbar">
+		<ion-title>{{nama_produk}}</ion-title>
+    	<ion-buttons slot="start">
+		    <ion-back-button style="color: #687d7b"></ion-back-button>
+		</ion-buttons>
+    		<ion-buttons slot="end">
+      			<ion-button size="small" shape="round">
+        			<fa-icon icon="share-alt" class="icon-head-io"></fa-icon>
+			    </ion-button>
+				<ion-button size="small" shape="round" (click)="gotoKeranjang()">
+        			<fa-icon icon="shopping-cart" class="icon-head-io"></fa-icon>
+			    </ion-button>
+	    </ion-buttons>
+  	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <ion-slides pager="true" class="featureSlider" style="background: #ffffff"> <!-- bfbfbf -->
+    <ion-slide *ngFor="let images of singleimgproduk">
+      <img src="{{server+'/assets/images/bg-produk/'+images.gambar_produk}}">
+    </ion-slide>
+  </ion-slides>
+
+<div class="reviewresult" *ngFor="let datas of singleproduk">
+<div class="column-bg-p-io mgbot10-io topborder1">
+  <ion-item lines="none" style="margin-bottom: -10px; z-index: 999;">
+	<ion-icon name="star" class="rating-star-y-io"></ion-icon>
+	<ion-icon name="star" class="rating-star-y-io"></ion-icon>
+	<ion-icon name="star" class="rating-star-y-io"></ion-icon>
+	<ion-icon name="star" class="rating-star-y-io"></ion-icon>
+	<ion-icon name="star" class="rating-star-y-io"></ion-icon>
+	<span class="jumlah-ulasan">33 Ulasan</span>
+	<span slot="end"><fa-icon [icon]="['far','heart']" (click)="gotoFavorit()" class="fa-icon-heart-io"></fa-icon></span>
+</ion-item>
+<ion-item lines="none">
+  <ion-label text-wrap class="lebel-title-io">
+    {{datas.nama_produk}}
+  </ion-label>
+</ion-item>
+<ion-item lines="none" style="margin-top: -15px; display: none;">
+  <ion-badge color="danger">50%</ion-badge>
+  <span class="harga-diskon"> Rp 200,000</span>
+</ion-item>
+<ion-item lines="none" style="margin-top: -15px; padding-bottom: 10px;">
+  <span class="harga-fix-produk"> Rp {{datas.harga_produk}}</span>
+  <ion-button slot="end"  size="default" color="specialgray">Bayar Rp 100</ion-button>
+</ion-item>
+</div>
+
+<div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">INFORMASI PRODUK</ion-label>
+  </ion-item>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="4"> 
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Stok</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Merek</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Model</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Kapasitas</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Berat</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Garansi</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Kondisi</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk">Terjual</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="8"> 
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">183</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">Samsung</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">SAMSUNG GALAXY A7 2018</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">6/128 GB</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">500 Gram</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">Garansi Resmi</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b"><ion-badge color="success">Baru</ion-badge></ion-label>
+        </ion-item>
+        <ion-item lines="none" class="min-height0">
+          <ion-label text-wrap class="label-info-produk-b">110</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-label class="label-title-column">DESKRIPSI PRODUK</ion-label>
+  </ion-item>
+  <ion-item lines="none" class="mgbot5-io mgtop5-io">
+    <ion-label text-wrap class="label-info-produk">
+      <span [innerHTML]="datas.deskripsi_produk"></span>
+    </ion-label>
+  </ion-item>
+</div>
+</div>
+
+<div class="column-bg-p-io mgbot10-io">
+  <ion-item>
+    <ion-label class="label-title-column">ULASAN PRODUK</ion-label>
+  </ion-item>
+
+  <div class="ulasan-row">
+  <ion-item lines="none">
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+    <ion-label class="label-title-ulasan">Chandra Gustiya</ion-label>
+    <span class="label-tgl-ulasan" slot="end">17 August 2019</span>
+  </ion-item>
+
+  <ion-card-content style="padding-top: 0px;">
+    <ion-item class="min-height0 mgbot5-io" lines="none" no-padding>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+    </ion-item>
+    <ion-label>
+        Bagus banget dah murah meriah cuman rp 100 recommend banget si kakak.
+    </ion-label>
+  </ion-card-content>
+  </div>
+  <div class="ulasan-row">
+  <ion-item lines="none">
+  <ion-avatar>
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+    <ion-label class="label-title-ulasan">Gustiya</ion-label>
+    <span class="label-tgl-ulasan" slot="end">12 August 2019</span>
+  </ion-item>
+
+  <ion-card-content style="padding-top: 0px;">
+    <ion-item class="min-height0 mgbot5-io" lines="none" no-padding>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+      <ion-icon name="star" class="rating-star-y-io"></ion-icon>
+    </ion-item>
+    <ion-label>
+        Bagus banget dah murah meriah cuman rp 100 recommend banget si kakak.
+    </ion-label>
+  </ion-card-content>
+  </div>
+
+</div>
+
+<div class="column-bg-p-io pdbot70-io">
+  <ion-item>
+    <ion-label class="label-title-column">PRODUK TERKAIT</ion-label>
+  </ion-item>
+
+    <div class="thumnails-io">
+      <div class="list-thumbnail-io">
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/394510248/394510248_80584449-5708-4d19-8eea-7e03462699ee_1080_1080.jpg">
+        </div>
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/283002686/283002686_7dc52f1f-5e01-4e2f-9de2-ef05124b1e7d_1080_1080.jpg">
+        </div>
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_d719e055-db6c-427d-8b24-702585988a24_600_600.png">
+        </div>
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/7/10/394510248/394510248_80584449-5708-4d19-8eea-7e03462699ee_1080_1080.jpg">
+        </div>
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_d719e055-db6c-427d-8b24-702585988a24_600_600.png">
+        </div>
+        <div class="img-thumb-io">
+            <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2019/2/15/8900186/8900186_aea29143-744e-41a0-ac49-a35428796726_600_600.png">
+        </div>
+    </div>
+  </div>
+</div>
+</ion-content>
+
+<div class="footer-cos-io">
+    <ion-row>
+      <ion-col size="2"> 
+        <ion-button color="transparentio">
+          <fa-icon [icon]="['far','comment-alt']" class="icon-head-io-x"></fa-icon>
+        </ion-button>
+      </ion-col>
+    <ion-col size="10">
+      <ion-button expand="block" size="default" color="danger" (click)="presentModal(produk_id)">
+        Beli Sekarang
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+	

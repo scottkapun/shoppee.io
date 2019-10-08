@@ -1,5 +1,7 @@
 {
   "name": "client_appio",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

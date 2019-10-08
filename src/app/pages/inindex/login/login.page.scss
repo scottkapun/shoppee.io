@@ -1,0 +1,54 @@
+ion-header ion-toolbar {
+  --background: #3880ff;
+  color: #FFFFFF;
+}
+
+ion-slide {
+    height: 100vh;
+    flex-direction: column;
+}
+
+ion-slide img {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
+.marketing-t1 {
+	font-size: 14px;
+	color: #999;
+}
+
+.marketing-t1 span {
+	color: #3880ff;
+}
+
+.gridoption {
+  border-bottom:1px solid #e1e1e1;
+}
+
+.opsidaftar {
+  padding: 6px;
+  text-align:center;
+}
+
+.gridoption .no-hp.active,
+.gridoption .email.active {
+  color: #3880ff;
+  border-bottom: 2px solid #3880ff;
+  padding-bottom:12px;
+  margin-bottom:-12px;
+}
+
+.no-hp {
+  color: #777;
+  margin-left:-10px;
+}
+
+.email {
+  color: #777;
+  margin-right:-10px;
+}
+
+.displaynone {
+  display:none;
+}
