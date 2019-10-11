@@ -114,6 +114,10 @@
 	margin-bottom: 50px;
 }
 
+.mgbot55-io {
+	margin-bottom: 55px;
+}
+
 .mgbot60-io {
 	margin-bottom: 60px;
 }
@@ -330,4 +334,51 @@ ion-refresher ion-refresher-content .refresher-refreshing .refresher-refreshing-
 ion-refresher ion-refresher-content {
 	height: 120px;
 	--color:#444!important;
+}
+
+.upp-io-cg {
+	text-transform: uppercase;
+}
+
+.ion-modal-cg-ex_{
+	.modal-wrapper_{
+        height: 45%;
+        width: 95%;
+    }
+}
+
+.align-io-l {
+  text-align: left;
+}
+
+.align-io-r {
+  text-align: right;
+}
+
+.align-io-c {
+  text-align: center;
+}
+
+ion-modal.ion-modal-cg-ex {
+    &.bottom {
+        align-items: flex-end;
+    }
+
+    --height: auto;
+
+    .modal-wrapper{
+        width: 95%;
+        border-radius: 4px;
+    }
+
+    .ion-page {
+        position: relative;
+        display: block;
+        contain: content;
+
+        .inner-content {
+            max-height: 80vh;
+            overflow: auto;
+        }
+    }
 }

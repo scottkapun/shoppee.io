@@ -8,8 +8,8 @@ import { SyaratKetentuanGamePage } from '../pages/index/components/syarat-ketent
 
 @Injectable()
 export class AccessServer {
-  server: string = 'http://167.71.198.54/library/keyapi_appio/';
-  //server: string = 'https://www.carvellonic.com/server_laundryapp/';
+  server: string = 'http://192.168.100.238/_dev/dev_apps/shoppee.io/backend_appio/library/keyapi_appio/';
+  //server: string = 'http://167.71.198.54/library/keyapi_appio/';
 
   constructor(
     public http : Http,   

@@ -1,0 +1,54 @@
+.headicon {
+	color: #687d7b;
+	font-size: 30px;
+}
+
+.headicon-qty {
+	color: #687d7b;
+	font-size: 25px;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+
+/* Remove bottom border on md */
+.header-md::after {
+  background-image: none;
+}
+
+.img-modal-io {
+	width: 95px;
+	height: 95px;
+}
+
+.footer-cos-io {
+  position: absolute; bottom: 0px; width: 100%; background: #FFF; border-top: 1px solid #e1e1e1
+}
+
+.total-harga {
+	color: #555;
+	font-size: 12px;
+}
+
+.total-xharga .sc-ion-label-md-h {
+	line-height: 0px
+}
+
+.info-game {
+	font-size: 14px;
+}
+
+.info-game-2 {
+	font-size: 12px;
+}
+
+.color-333 {
+	color: #333
+}
+
+.bg-vs {
+	background-color : #e8e8e8;
+	border-bottom: 1px solid #ff5400;
+}

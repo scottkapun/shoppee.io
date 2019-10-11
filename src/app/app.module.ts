@@ -23,6 +23,7 @@ import { LoginPageModule } from './pages/inindex/login/login.module';
 import { KategoriPageModule } from './pages/index/components/kategori/kategori.module';
 import { TambahShopPageModule } from './pages/index/components/tambah-shop/tambah-shop.module';
 import { TambahShopGamePageModule } from './pages/index/components/tambah-shop-game/tambah-shop-game.module';
+import { TambahShopClubPageModule } from './pages/index/components/tambah-shop-club/tambah-shop-club.module';
 import { SyaratKetentuanGamePageModule } from './pages/index/components/syarat-ketentuan/syarat-ketentuan-game/syarat-ketentuan-game.module';
 
 import { IonicStorageModule } from '@ionic/storage';
@@ -36,7 +37,7 @@ library.add(fas, far, fab);
   entryComponents: [],
   imports: [
   BrowserModule, 
-  IonicModule.forRoot({ _forceStatusbarPadding: true }), 
+  IonicModule.forRoot({ _forceStatusbarPadding: false }), 
   IonicStorageModule.forRoot(), 
   AppRoutingModule,
   HttpModule,
@@ -45,6 +46,7 @@ library.add(fas, far, fab);
   LoginPageModule,
   TambahShopPageModule,
   TambahShopGamePageModule,
+  TambahShopClubPageModule,
   KategoriPageModule,
   SyaratKetentuanGamePageModule,
   IonicRatingModule

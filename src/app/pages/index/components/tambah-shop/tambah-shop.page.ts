@@ -24,7 +24,6 @@ export class TambahShopPage implements OnInit {
 	singleimgproduk: any = [];
 	datagame: any = [];
 	stgame: string;
-	game_berakhir: string;
 
 	//disabled_io = "false";
 	//disabled_clr = "color: #000";
@@ -32,8 +31,8 @@ export class TambahShopPage implements OnInit {
 
 
 	displaynone: string = "displaynone";
+	displaynone2: string = "";
 	label_game: string;
-	label_game_tetap: string;
 
 	produk_id:number;
 
@@ -86,11 +85,8 @@ export class TambahShopPage implements OnInit {
 	        }
 	    	this.singleimgproduk = data.images;
 	    	this.datagame = data.datagame;
-	    	this.stgame = data.stgame;
-		    this.label_game = "Bayar Rp "+data.hrgaevent;
-		    this.label_game_tetap = data.hrgaevent;
-			this.game_berakhir = data.tglakhir;
-	    	console.log(data);
+	    	this.stgame = data.cekevt;
+	    	this.label_game = "IKUTI EVENT";
 	    });
 	}
 
@@ -104,11 +100,12 @@ export class TambahShopPage implements OnInit {
     	});
 	}
 
-	async pilihGame(a){
+	async pilihGame(a,b){
 		const modal = await this.modalController.create({
 	      component: TambahShopGamePage,
 	      componentProps: {
 	          "gamepId": a,
+	          "jumlahmatch": b,
 	          "produkId": this.produk_id
 	        }
 	    });
@@ -137,6 +134,7 @@ export class TambahShopPage implements OnInit {
 	gameSo(){
 		if(this.displaynone=="displaynone"){
 			this.displaynone = "";
+			this.displaynone2 = "displaynone";
 			this.label_game = "Bayar Normal";
 //			this.disabled_io = "true";
 //			this.disabled_clr = "color: #a9a9a9";
@@ -144,7 +142,8 @@ export class TambahShopPage implements OnInit {
 
 		}else{
 			this.displaynone = "displaynone";
-			this.label_game = "Bayar Rp "+this.label_game_tetap;
+			this.displaynone2 = "";
+			this.label_game = "IKUTI EVENT";
 //			this.disabled_io = "false";
 //			this.disabled_clr = "";
 			this.label_event = "";

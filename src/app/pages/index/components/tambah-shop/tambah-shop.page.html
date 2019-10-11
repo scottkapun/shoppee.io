@@ -46,23 +46,22 @@
   <ion-textarea rows="2" placeholder="Catatan (opsional) ...." maxlength="100"></ion-textarea>
 </ion-item>
 
-<ion-item lines="none" class="mgtop10-io" *ngIf="stgame=='play'">
+<ion-item lines="none" class="mgtop10-io" *ngIf="stgame>'0'">
   <ion-label class="lebel-title-game-io">{{label_event}}</ion-label>
   <ion-button slot="end" (click)="gameSo()" size="default" color="specialgray">{{label_game}}</ion-button>
 </ion-item>
 
-<div id="game-so" class="pdbot70-io {{displaynone}}">
+<div id="game-so" class="{{displaynone}}">
   <ion-item lines="none" style="margin-top: -10px">
     <ion-label text-wrap class="info-game color-333">
       Bayar lebih murah dengan cara menebak siapakan yang akan menang dalam pertandingan sepak bola ini. <br/>
-      <span style="color: #3880ff" (click)="syaratKetentuangame()">Syarat & Ketentuan</span> berlaku.<br/><br/>
-      Event akan berakhir pada <span style="font-weight: 500">{{game_berakhir}}</span>.
+      <span style="color: #3880ff" (click)="syaratKetentuangame()">Syarat & Ketentuan</span> berlaku.
     </ion-label>
   </ion-item>
   <div>
     <ion-item lines="none" *ngFor="let datagames of datagame;" href="javascript:void(0)">
-      <ion-label text-wrap (click)="pilihGame(datagames.game_produk_id);">
-        <span class="lebel-title-game-io">BAYAR <span class="harga-fix-produk-game">RP {{datagames.harga_event}}</span></span>
+      <ion-label text-wrap (click)="pilihGame(datagames.game_produk_id,datagames.match_game);" class="info-game">
+        <span class="lebel-title-game-io">TEBAK <span class="harga-fix-produk-game">{{datagames.match_game}} MATCH</span> BAYAR <span class="harga-fix-produk-game">RP {{datagames.harga_rp}} <span style="float: right;">({{datagames.harga_poin}} POIN)</span></span></span>
       </ion-label>
     </ion-item>
   </div>
@@ -70,7 +69,7 @@
 </ion-content>
 
 
-<div class="footer-cos-io total-xharga">
+<div class="footer-cos-io total-xharga {{displaynone2}}">
     <ion-row>
       <ion-col size="5"> 
         <ion-label text-wrap>
